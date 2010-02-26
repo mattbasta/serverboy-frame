@@ -1,0 +1,188 @@
+* form,
+form ul,
+form ol,
+form li {line-height:1em !important;}
+
+form label {
+	display:block;
+	font-size:1.1em;
+	clear:left;
+	position:relative;
+}
+form label * {z-index:3;}
+form hr {
+	color:#aaa;
+	background:#aaa;
+	border:0;
+	height:1px;
+	margin:0 0 1em;
+}
+
+
+/* Generic Controls */
+form input {width:175px;}
+form textarea,
+form input,
+form select {
+	display:block;
+	clear:left;
+	margin-bottom:1em;
+	padding:4px;
+	font-size:1.2em;
+	border:1px solid #aaa;
+	overflow:visible;
+}
+form input[type="hidden"],
+form input.hidden {display:none !important;}
+
+/* Checkboxes/Radio */
+form label span {
+	padding:0.25em 0;
+	display:block;
+	float:left;
+}
+form label input {
+	display:inline;
+	vertical-align:middle;
+}
+form input[type="checkbox"],
+form input[type="radio"],
+form input.checkbox,
+form input.radio {
+	border:0;
+	float:left;
+	height:1.5em;
+	width:1em;
+	font-size:1em;
+	margin:0 0.5em 0 0;
+	padding:0;
+}
+
+form textarea {
+	height:6em;
+	width:75%;
+}
+
+/* Buttons */
+form input.submit,
+form button {
+	margin:5px 0;
+	padding:3px;
+	width:auto;
+	
+	background:#f0f0f0;
+	border:1px solid #aaa;
+	font-size:1.2em;
+	overflow:visible;
+	line-height:1em;
+}
+/*This guy makes IE ignore the CSS above. So we just use modern css in it.*/
+form input[type="submit"],
+form button {
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+form input.submit:hover,
+form input[type="submit"]:hover, /*This guy hides the CSS from IE...but it doesn't matter anyway because IE doesn't do hover on inputs.*/
+form button:hover {
+	background:#f5f5f5;
+}
+
+
+/* Custom Controls */
+
+/*
+Currency/Unit Control
+<p class="money">
+	<span>
+		<span><!-- Currency Symbol --></span>
+		<input type="text" value="" name="..." />
+	</span>
+</p>
+<p class="unit">
+	<span>
+		<input type="text" value="" name="..." />
+		<span><!-- Unit --></span>
+	</span>
+</p>
+*/
+form p.money,
+form p.unit {
+	margin-bottom:1em;
+	font-size:1.15em;
+	line-height:2em;
+}
+* html form p.money, 
+* html form p.unit {
+	padding:0;
+	margin-top:5px;
+}
+form p.money span,
+form p.unit span {
+	margin:0;
+	border:1px solid #aaa;
+	padding:0.35em;
+}
+form p.money span span,
+form p.money span input,
+form p.unit span span,
+form p.unit span input {
+	vertical-align:baseline;
+	border:0;
+	padding:0;
+}
+form p.money span input,
+form p.unit span input {
+	border:0;
+	margin:0;
+	padding:0;
+	font-size:1.15em;
+	border-bottom:1px dotted #ccc;
+}
+form p.unit span input {
+	text-align:right;
+}
+
+form .upload {
+	display:inline;
+	line-height:1em;
+	padding:1em 8em 1.5em 0;
+	border:1px solid #aaa;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	border-left:0.3em solid #888;
+	float:left;
+	clear:left;
+}
+form .upload * {padding-left:1em;}
+form .upload input.fileupload {
+	display:inline;
+	margin-bottom:0;
+	margin-left:1em;
+	background:#fff;
+}
+form .upload small {
+	margin-top:0;
+	margin-bottom:0;
+	padding-left:1.2em;
+}
+form .upload span {font-size:1.1em;}
+form .upload .remove {
+	width:auto;
+	padding:0.25em;
+}
+form .uploadpreview {
+	float:left;
+	margin-bottom:0.5em;
+	border:1px solid #aaa;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	padding:0.5em;
+}
+
+
+.formerror {
+	font-weight:bold;
+	color:#b00;
+}

@@ -1,0 +1,83 @@
+/*
+Tabs
+*/
+
+.tabs {
+	padding-left:0.5em; /*One extra to account for tab silliness*/
+	border-bottom:1px solid #aaa;
+}
+
+.tabs li {
+	list-style:none;
+	display:inline;
+	padding:0.3em 0;
+}
+.tabs li a {
+	padding:0.35em 0.8em;
+	background:#f0f0f0;
+	border:1px solid #ccc;
+	border-bottom:0;
+	color:#666;
+	font-size:1em;
+	line-height:1em;
+	text-decoration:none;
+	margin-right:-1px;
+}
+.tabs li a:hover {background:#fcfcfc}
+.tabs li.current a {
+	padding:0.5em 1em 0.475em;
+	font-size:1em;
+	background:#fff;
+	margin-right:0;
+	border-color:#aaa;
+	color:#000;
+}
+
+/*
+Inline Dialogs
+*/
+
+.login,
+.warning_box,
+.notice_box,
+.success_box {
+	border:1px solid #eee;
+	border-radius:0.4em;
+	-moz-border-radius:0.4em;
+	-webkit-border-radius:0.4em;
+	padding:0.4em 1em 0;
+	margin:1em;
+}
+
+.login {
+	margin:1em 2em;
+	border-left:0.35em solid #fd0;
+}
+.warning_box {border-top:0.35em solid #b00;}
+.notice_box {border-top:0.35em solid #999;}
+.success_box {border-top:0.35em solid #509f4f;}
+.login strong,
+.warning_box strong,
+.notice_box strong,
+.success_box strong {
+	display:block;
+	font-size:1.2em;
+	padding:0.3em 0;
+	margin:0 0 0.2em;
+}
+.login * strong,
+.warning_box * strong,
+.notice_box * strong,
+.success_box * strong {
+	display:inline;
+	font-size:1em;
+	padding:0;
+	margin:0;
+}
+.login p,
+.warning_box p,
+.notice_box p,
+.success_box p {
+	line-height:1.5em;
+	color:#444;
+}
