@@ -47,18 +47,20 @@ ul, ol, dl,
 address,
 pre,
 code,
+table,
 p {margin-bottom:1em;}
 
 p,
 dl,
 ul li,
 ol li {line-height:2em;}
+
 address {line-height:1.75em;}
 
 code,
 pre,
+blockquote,
 .single-spaced p,
-.single-spaced blockquote,
 .single-spaced ul,
 .single-spaced ol {line-height:1.25em;}
 
@@ -67,17 +69,13 @@ dl.bold dt {font-weight:bold;}
 
 blockquote {
 	padding:0 0 0 0.5in;
-	margin:1em 0 2em;
+	margin:1em 0;
 }
-
-.mla blockquote,
-.single-spaced-blockquote blockquote {line-height:1.5em !important;}
 
 code {
 	display:block;
 	white-space:pre;
 	font-size:1em;
-	line-height:1.25em;
 }
 p code {
 	margin:0;

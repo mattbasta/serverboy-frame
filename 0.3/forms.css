@@ -32,6 +32,9 @@ form select {
 	border:1px solid #aaa;
 	overflow:visible;
 }
+form label textarea,
+form label input,
+form label select {font-size:1em;}
 form input[type="hidden"],
 form input.hidden {display:none !important;}
 
@@ -64,10 +67,13 @@ form textarea {
 }
 
 /* Buttons */
+
+form input.reset,
+form input.button,
 form input.submit,
-form button {
+button {
 	margin:5px 0;
-	padding:3px;
+	padding:4px 10px;
 	width:auto;
 	
 	background:#f0f0f0;
@@ -76,18 +82,34 @@ form button {
 	overflow:visible;
 	line-height:1em;
 }
-/*This guy makes IE ignore the CSS above. So we just use modern css in it.*/
+
+form input.reset::-moz-focus-inner,
+form input.button::-moz-focus-inner,
+form input.submit::-moz-focus-inner,
+button::-moz-focus-inner { 
+    border: 0!important;
+    padding: 0!important;
+}
+form input[type="reset"],
+form input[type="button"],
 form input[type="submit"],
-form button {
+button {
 	border-radius:3px;
 	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
 }
-form input.submit:hover,
-form input[type="submit"]:hover, /*This guy hides the CSS from IE...but it doesn't matter anyway because IE doesn't do hover on inputs.*/
-form button:hover {
-	background:#f5f5f5;
+form input[type="reset"]:hover,
+form input[type="button"]:hover,
+form input[type="submit"]:hover,
+button:hover {
+	background:#f6f6f6;
 }
+form input[type="reset"]:active,
+form input[type="button"]:active,
+form input[type="submit"]:active,
+button:active {
+	background:#eaeaea;
+}
+
 
 
 /* Custom Controls */
@@ -156,11 +178,13 @@ form .upload {
 	clear:left;
 }
 form .upload * {padding-left:1em;}
-form .upload input.fileupload {
+form .upload input {
 	display:inline;
 	margin-bottom:0;
-	margin-left:1em;
-	background:#fff;
+	margin:0.75em 0 0.75em 1em;
+	border:initial;
+	width:auto;
+	padding:initial;
 }
 form .upload small {
 	margin-top:0;
