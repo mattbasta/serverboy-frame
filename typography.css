@@ -1,0 +1,221 @@
+body.sm {font-size:70%;}
+body.med {font-size:80%;}
+body.lg {font-size:90%;}
+body.xl {font-size:100%;}
+
+h1,h2,h3,h4,h5,h6 {clear:both;font-weight:bold;}
+
+body.serif,
+body.times-new-roman {font-family:Times New Roman,Times,Georgia,serif;}
+body.georgia {font-family:Georgia,Times New Roman,Times,serif;}
+
+body.sans-serif,
+body.arial {font-family:Arial,Helvetica,Verdana,sans-serif;}
+body.verdana {font-family:Verdana,Arial,Helvetica,sans-serif;}
+
+.serif-headers h1,
+.serif-headers h2,
+.serif-headers h3,
+.serif-big-headers h1,
+.serif-big-headers h2,
+.serif-big-headers h3,
+.serif-headers h4,
+.serif-headers h5,
+.serif-headers h6,
+.times-new-roman-headers h1,
+.times-new-roman-headers h2,
+.times-new-roman-headers h3,
+.times-new-roman-big-headers h1,
+.times-new-roman-big-headers h2,
+.times-new-roman-big-headers h3,
+.times-new-roman-headers h4,
+.times-new-roman-headers h5,
+.times-new-roman-headers h6 {font-family:Times New Roman,Times,Georgia,serif;}
+.georgia-headers h1,
+.georgia-headers h2,
+.georgia-headers h3,
+.georgia-big-headers h1,
+.georgia-big-headers h2,
+.georgia-big-headers h3,
+.georgia-headers h4,
+.georgia-headers h5,
+.georgia-headers h6 {font-family:Georgia,Times New Roman,Times,serif;}
+
+.sans-serif-headers,
+.arial-headers {font-family:Arial,Helvetica,Verdana,sans-serif;}
+.verdana-headers {font-family:Verdana,Arial,Helvetica,sans-serif;}
+
+/*
+Logarithmic Header Sizing:
+h(x)=-ln(x)+2.55
+*/
+h1, .log-headers h1 {font-size:2.80em;}
+h2, .log-headers h2 {font-size:2.11em;}
+h3, .log-headers h3 {font-size:1.70em;}
+h4, .log-headers h4 {font-size:1.41em;}
+h5, .log-headers h5 {font-size:1.19em;}
+h6, .log-headers h6 {font-size:1em;}
+
+.quarter-headers h1 {font-size:2.25em;}
+.quarter-headers h2 {font-size:2em;}
+.quarter-headers h3 {font-size:1.75em;}
+.quarter-headers h4 {font-size:1.5em;}
+.quarter-headers h5 {font-size:1.25em;}
+.quarter-headers h6 {font-size:1em;}
+
+.third-headers h1 {font-size:2.66em;}
+.third-headers h2 {font-size:2.33em;}
+.third-headers h3 {font-size:2em;}
+.third-headers h4 {font-size:1.66em;}
+.third-headers h5 {font-size:1.33em;}
+.third-headers h6 {font-size:1em;}
+
+.half-headers h1 {font-size:3.5em;}
+.half-headers h2 {font-size:3em;}
+.half-headers h3 {font-size:2.5em;}
+.half-headers h4 {font-size:2em;}
+.half-headers h5 {font-size:1.5em;}
+.half-headers h6 {font-size:1em;}
+
+.margin-headers h1,
+.margin-headers h2,
+.margin-headers h3 {margin:0.75em 0;}
+.margin-headers h4,
+.margin-headers h5,
+.margin-headers h6 {margin:1em 0;}
+.pre-margin-headers h1,
+.pre-margin-headers h2,
+.pre-margin-headers h3 {margin-top:0.75em}
+.pre-margin-headers h4,
+.pre-margin-headers h5,
+.pre-margin-headers h6 {margin-top:1em}
+.post-margin-headers h1,
+.post-margin-headers h2,
+.post-margin-headers h3 {margin-bottom:0.75em}
+.post-margin-headers h4,
+.post-margin-headers h5,
+.post-margin-headers h6 {margin-bottom:1em}
+
+.no-pre-margin-h1 h1 {margin-top:0 !important;}
+
+.thin-headers h1,
+.thin-headers h2,
+.thin-headers h3,
+.thin-big-headers h1,
+.thin-big-headers h2,
+.thin-big-headers h3,
+.thin-headers h4,
+.thin-headers h5,
+.thin-headers h6 {font-weight:normal;}
+
+pre {font-size:1em;}
+.use-code pre,
+.use-code code {
+	font-family:Consolas, Courier New, Courier, monospace;
+}
+
+address,
+code,
+p, .single-spaced p, ul, ol {margin-bottom:0.5em;}
+code,
+p, .single-spaced p,
+.single-spaced blockquote,
+.single-spaced ul,
+.single-spaced ol {line-height:1.25em;}
+
+.mla address,
+.mla pre,
+.mla code,
+.mla p,
+.double-spaced p {margin-bottom:1em;}
+
+.mla p,
+.double-spaced blockquote,
+.double-spaced p,
+.double-spaced blockquote,
+.mla dl,
+.mla ul li,
+.mla ol li {line-height:2em;}
+.mla address {line-height:1.75em;}
+
+ul,
+ol {
+	padding-left:5ex;
+}
+ul {list-style:disc;}
+ul ul {list-style:square;}
+ul ul ul {list-style:circle;}
+ol {list-style:decimal;}
+ol ol {list-style:lower-alpha;}
+ol ol ol {list-style:lower-roman;}
+
+dl.indent dd {
+	padding-left:0.5in;
+}
+dl.bold dt {font-weight:bold;}
+
+blockquote {
+	padding:0 0 0 0.5in;
+	margin:1em 0;
+}
+blockquote.pull {
+	font-size:1.5em;
+	padding:1em 0.5in;
+	margin:0;
+}
+blockquote.poem {
+	white-space:pre;
+	font-style:oblique;
+	font-size:1.2em;
+	text-align:center;
+	margin:0;
+}
+
+.mla blockquote,
+.single-spaced-blockquote blockquote {line-height:1.5em !important;}
+.triple-spaced-blockquote blockquote {line-height:3em !important;}
+.triple-spaced-blockquote blockquote.informal,
+.triple-spaced-blockquote blockquote.pull {line-height:1.5em !important;}
+
+
+code {
+	display:block;
+	white-space:pre;
+	font-size:1em;
+	line-height:1.25em;
+}
+p code {
+	margin:0;
+	white-space:normal;
+	display:inline;
+}
+
+ol.loweralpha {list-style-type:lower-alpha;}
+ol.upperalpha {list-style-type:upper-alpha;}
+
+
+/* Inline Layout */
+
+.aside {
+	padding:0 2em;
+}
+.aside,
+blockquote.aside,
+.aside-right .aside,
+.right-aside,
+blockquote.right-aside {float:right;clear:right;}
+.left-aside .aside,
+blockquote.left-aside,
+.left-aside {float:left;clear:left;}
+
+#config blockquote.correspond {
+	padding:0 0.25in;
+	position:relative;
+}
+
+small {font-size:0.8em;}
+address {
+	padding:0 1em;
+	margin-left:1em;
+	margin-right:1em;
+}
