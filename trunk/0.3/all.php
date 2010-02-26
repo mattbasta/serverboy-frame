@@ -17,7 +17,7 @@ $memcache->increment('services/frame/0.3/total');
 if(!defined('PATH_PREFIX'))
 	define('PATH_PREFIX', './');
 
-require('../cssmin.php');
+require('../cssmin_2.php');
 
 ob_start("ob_gzhandler");
 
@@ -47,9 +47,12 @@ if(isset($_GET['include'])) {
 $output = '';
 $lastMod = 0;
 foreach($includes as $include) {
-	$output .= cssmin::minify(file_get_contents(PATH_PREFIX . "$include.css"));
+	$output .= file_get_contents(PATH_PREFIX . "$include.css");
 	$lastMod = max($lastMod, filemtime(PATH_PREFIX . "$include.css"));
 }
+
+$output = Minify_CSS_Compressor::process($output);
+
 header('Last-Modified: ' . gmdate('D, d M Y H:i:s', $lastMod) . ' GMT');   
 $output = str_replace(';}','}',$output);
 $output = trim($output);
