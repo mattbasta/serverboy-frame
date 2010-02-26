@@ -1,0 +1,95 @@
+body {
+	font-size:80%;
+	line-height:2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height:1em;
+	font-size:2em;
+}
+h2,
+section h1 {
+	font-size:1.5em;
+	margin:0.833333em 0;
+}
+h3,
+section h2,
+section section h1 {
+	font-size:1.3em;
+	font-weight:bold;
+	margin:0.961538em 0;
+}
+h4,
+section h3,
+section section h2,
+section section section h1 {
+	font-size:1.2em;
+	font-weight:bold;
+	margin:1.04167em 0;
+}
+
+section {
+	margin-top:2em;
+}
+
+#paper p {
+	margin-bottom:1em;
+}
+#paper q:before {content:'\201C';}
+#paper q:after {content:'\201D';}
+
+#paper cite {font-style:italic;}
+#paper blockquote {
+	padding-left:1in;
+}
+code {
+	line-height:1.2em;
+	margin:1em 0;
+	padding-left:0.5in;
+}
+p code {margin:0;padding:0;}
+.code {padding-left:0.5in;}
+
+table {margin:1em 0;}
+table thead td {text-align:center;}
+table, td, th {border:1px solid #666;}
+td, th {padding:0 0.25em;}
+figure > dt,
+* html figure dt,
+table caption {
+	text-align:left;
+	color:#444;
+}
+figure > dt,
+* html figure dt {
+	display:block;
+	margin-top:2em;
+}
+figure dd {padding:0.5em 0 1em;}
+
+ol,
+ul {padding-left:0.5in;}
+ul ul {list-style-type:circle;}
+ul ul ul {list-style-type:square;}
+
+dl {padding:2em 0;}
+dl dd {padding-left:0.5in;}
+
+kbd, var {
+	padding:0.1em 0.25em;
+	background:#eee;
+}
+@media print {
+	kbd, var {
+		padding:0;
+		font-weight:bold;
+	}
+}
+
+em {font-style:oblique;}
+
+/*Screen-only items*/
+@media screen {
+	abbr {border-bottom:1px dotted #aaa;}
+	dfn {border-bottom:1px dotted #69c;}
+}

@@ -1,0 +1,21 @@
+/*
+Tables
+*/
+
+table {
+	width:100%;
+	border-top:1px solid #aaa;
+}
+th,
+td {padding:0.5em 0 0.5em 0.25em;}
+th {
+	border-bottom:1px solid #777;
+	font-size:1.1em;
+	text-align:left;
+}
+td {border-bottom:1px solid #aaa}
+caption {
+	text-align:right;
+	padding:0.75em 0.25em;
+	color:#666;
+}

@@ -1,0 +1,16 @@
+pre, code, .code, samp, kbd, var {font-family:Consolas,Courier New,Courier,monospace,mono;}
+pre, code {white-space:pre;}
+@media screen {
+	pre, code {overflow:auto;}
+}
+body.use-code p code,
+code.non-executing,
+.code {white-space:normal;}
+body.use-code code .cs { /**/
+	color:#00f;
+	font-weight:bold;
+}
+body.use-code code .cm {color:#080;} /*Comment*/
+body.use-code code .v {color:#008;} /*Variable*/
+body.use-code code .l {color:#888;} /*Literal*/
+body.use-code code .n {color:#800;} /*Literal*/

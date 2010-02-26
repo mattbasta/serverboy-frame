@@ -1,0 +1,7 @@
+.f_b {font-weight:bold;}
+.f_i {font-style:oblique;}
+.f_u {text-decoration:underline;}
+.f_s {text-decoration:line-through;}
+.f_sps, .f_sbs {font-size:0.7em;} /*Should match up with sub and sup*/
+.f_sps {vertical-align:super;}
+.f_sbs {vertical-align:sub;}
