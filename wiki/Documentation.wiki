@@ -252,3 +252,22 @@ Ordered lists use numbering by default. Adding the following classes to the `<ol
 
 ||loweralpha||Uses lowercase letters for the list||
 ||upperalpha||Uses capital letters for the list||
+
+== Code ==
+
+When displaying code, it is often useful to highlight the syntax. Frame has built in support for syntax highlighting. To enable syntax highlighting, add the following configuration parameter to the body class:
+
+||use-code||Enables syntax highlighting||
+
+Code tags within a `<p>` tag will not be affected by this. Once enabled, syntax highlighting can be disabled on any individual `<code>` tag by placing the following class on it:
+
+||non-executing||Disables syntax highlighting on a `<code>` tag||
+
+To use syntax highlighting, the following classes should be placed on `<span>` tags inside the `<code>` tag (such that the `<span>` tags properly delineate the context of the code). The alternate tag can also be used in place of a `<span>` with a class.
+
+||Class||Represents||Description||Alternate||
+||cs||Code Structure||Represents a structure of the code (i.e.: a reserved word; for, while, etc.)||`<tt>`||
+||cm||Comment||Represents commented code||
+||v||Variable||Represents a variable||`<var>`||
+||l||Literal||Represents a literal value||`<kbd>`||
+||n||Numeric Literal||Represents a numeric value||
