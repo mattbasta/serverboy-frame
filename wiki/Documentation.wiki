@@ -233,7 +233,7 @@ All headers are bold by default.
 
 All text is double-spaced by default. To single-space elements, use the following configuration parameter:
 
-||single=spaced||Converts all text to single-spaced||
+||single-spaced||Converts all text to single-spaced||
 
 `<blcokquote>`, `<code>`, and `<pre>` are single-spaced by default.
 
@@ -252,4 +252,3 @@ Ordered lists use numbering by default. Adding the following classes to the `<ol
 
 ||loweralpha||Uses lowercase letters for the list||
 ||upperalpha||Uses capital letters for the list||
-
