@@ -1,0 +1,169 @@
+#summary Documentation for Frame features
+#labels Featured,Phase-Deploy,Phase-Implementation
+
+<wiki:toc max_depth="3" />
+
+= Getting Started =
+
+To get started using Frame, there are only a two steps.
+
+== Step 1: Get Frame ==
+
+There are three ways that you can get a copy of Frame. The first is to get it from the Google [http://code.google.com/p/serverboy-frame/downloads/list download page]. These are frozen copies of Frame that you can even hotlink against.
+
+The second way is to download a custom build from [http://frame.serverboy.net/build the homepage]. This allows you to include only the features that you want.
+
+The last way is to hotlink against the latest build. This way can result in problems, however, as changes to the build will be reflected on your site. Feature additions and removals can cause your site to break. You can do this by linking your stylesheet to http://frame.serverboy.net/latest/
+
+== Step 2: Including Frame ==
+
+Include a `<link />` tag in your page's `<head>` tag:
+
+{{{
+<head>
+<title>My page's title</title>
+<link type="text/css" rel="stylesheet" href="/path/to/frame.css" />
+</head>
+}}}
+
+If you are hotlinking, you can use this code:
+
+{{{
+<head>
+<title>My page's title</title>
+<link type="text/css" rel="stylesheet" href="http://frame.serverboy.net/latest/" />
+</head>
+}}}
+
+Remember, hotlinking will ensure that your site looks its best in all browsers, but it may also break your layout.
+
+== Optional Step 3: HTML5 Support ==
+
+If you intend to use the features of HTML5 in your site, then you will need to enable these in Internet Explorer. To do this, include the following code in your head tag:
+
+{{{
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+}}}
+
+This will enable you to use HTML5 tags in IE.
+
+= Using Frame =
+
+== Configuration ==
+
+All configuration for Frame should be placed in a class on the `<body>` tag as so:
+
+{{{
+<body class="configuration parameters here">
+}}}
+
+== Layout ==
+
+When designing your page, all elements should be placed in a default container. A default container is a container that encapsulates your content and provides a starting point for the rest of your layout.
+
+{{{
+
+<!-- Standard -->
+<div id="container"> ... </div>
+
+<!-- Paper -->
+<article id="paper"> ... </article>
+
+}}}
+
+Note that the use of `<article>` or `<div>` is not mandatory, but it is recommended.
+
+The layout features of Frame will not apply to elements that are outside of your default container.
+
+=== Clearing ===
+
+After every set of columns in a layout, you must "clear" the layout by placing a clearing `div` after the column set.
+
+{{{
+
+<div id="container">
+    <section class="g6"> ... </section>
+    <section class="g6"> ... </section>
+    <div class="clear"></div>
+</div>
+
+}}}
+
+The clearing div in the above example allows for more columns to be placed below the two `<section>` elements. Elements will align against the clearing `<div>` and not against the bottom of the `<section>` elements.
+
+There are two types of clearing elements available. The first is the standard clearing `<div>` as shown above. The second is a "cleargap" `<div>`, which introduces a `1em` gap between the sets of columns.
+
+{{{
+
+<div id="container">
+    <div class="clear"></div> <!-- Clearing Div -->
+    <div class="cleargap"></div> <!-- Cleargap Div -->
+</div>
+
+}}}
+
+=== Grid ===
+
+The container can be divided up according to a 12-unit-wide grid. Columns in the grid may be from one to eleven units wide.
+
+The following code creates a column consuming 6 units, one consuming 3 units, one consuming 2 units, and one consuming 1 unit.
+
+{{{
+
+<div id="container">
+    <section class="g6"> ... </section>
+    <section class="g3"> ... </section>
+    <div class="g2"> ... </div>
+    <nav class="g1"> ... </nav>
+    <div class="clear"></div>
+</div>
+
+}}}
+
+Note that the elements used to create the grid are inconsequential.
+
+==== Sub-Grids ====
+
+When placing grid elements inside another grid element, you must place the `gfirst` and `glast` classes on the first and last columns (respectively). This preserves the gutters between the columns:
+
+{{{
+
+<div id="container">
+    <section class="g6">
+        <div class="g2 gfirst"> ... </div>
+        <div class="g2"> ... </div>
+        <div class="g2 glast"> ... </div>
+        <div class="clear"></div>
+    </section>
+    <section class="g3"> ... </section>
+    <div class="g2"> ... </div>
+    <nav class="g1"> ... </nav>
+    <div class="clear"></div>
+</div>
+
+}}}
+
+==== Gutter Width ====
+
+By default, there is a `20px` "gutter" between each column and a `10px` gutter along the edges of the default container. There are two other options available, which can be set in the configuration of the page (using the `<body>` class):
+
+||gg10g||Reduces the gutter by half (10px between columns and 5px along the container)||
+||gg0g||Eliminates the gutter altogether||
+
+==== Shoving ====
+
+A column is also able to "shove" proceeding columns to the right (effectively increasing the right-hand gutter of the column).
+
+{{{
+
+<div id="container">
+    <section class="g4 s4"> ... </section>
+    <nav class="g4"> ... </nav>
+    <div class="clear"></div>
+</div>
+
+}}}
+
+The above example fills the whole default container with two four unit columns. The first column shoves the second column right by four units.
