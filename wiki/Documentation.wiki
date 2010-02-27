@@ -77,6 +77,12 @@ Note that the use of `<article>` or `<div>` is not mandatory, but it is recommen
 
 The layout features of Frame will not apply to elements that are outside of your default container.
 
+=== Container Positioning ===
+
+By default, the default container is centered on the page. To align it to the left of the screen, the following configuration parameter is available:
+
+||left||Aligns the default container to the left of the page.||
+
 === Clearing ===
 
 After every set of columns in a layout, you must "clear" the layout by placing a clearing `div` after the column set.
@@ -103,6 +109,8 @@ There are two types of clearing elements available. The first is the standard cl
 </div>
 
 }}}
+
+By default, `<hr />` tags and headers (`h1`-`h6` and `hgroup`) will automatically clear, as well.
 
 === Grid ===
 
@@ -190,3 +198,58 @@ The following configuration parameters are available to control gutter width on 
 
 ||gg25pg||A 2.5% gutter between columns and a 1.25% gutter along the edge of the default container||
 ||gg0g||No gutter _Note that this is the same parameter for grid columns_||
+
+== Typography ==
+
+The following configuration parameters are available for a page. These properties affect the entire page.
+
+||sm||Uses a small font size||
+||med||Uses a medium font size _Default_||
+||lg||Uses a large font size||
+||xl||Uses a very large font size||
+
+||serif/cambria||Loads a default OS-friendly serif font||
+||times/times-new-roman||Loads a serif font||
+||georgia||Loads Georgia||
+||sans-serif||Loads a default OS-friendly sans-serif font (Arial/Helvetica)||
+||verdana||Loads Verdana||
+||monospace||Loads an OS-friendly monospace font||
+
+=== Headers ===
+
+Header tags will automatically be sized logarithmically, though other configurations are available:
+
+||Tag||_default_||quarter-headers||third-headers||half-headers||
+||h1||2.8em||2.25em||2.66em||3.5em||
+||h2||2.11em||2em||2.33em||3em||
+||h3||1.7em||1.75em||2em||2.5em||
+||h4||1.41em||1.5em||1.66em||2em||
+||h5||1.19em||1.25em||1.33em||1.5em||
+||h6||1em||1em||1em||1em||
+
+All headers are bold by default.
+
+=== Text-Level Elements ===
+
+All text is double-spaced by default. To single-space elements, use the following configuration parameter:
+
+||single=spaced||Converts all text to single-spaced||
+
+`<blcokquote>`, `<code>`, and `<pre>` are single-spaced by default.
+
+=== Lists ===
+
+==== Definition Lists ====
+
+Definition lists are (by default) entirely unstyled aside from their line height and margining. Adding the following classes to the `<dl>` element will change the way definition list is presented. Classes may be mixed and matched.
+
+||indent||The `dd` tag is indented by `0.5in`||
+||bold||The `dt` tag is made bold||
+
+==== Ordered Lists ====
+
+Ordered lists use numbering by default. Adding the following classes to the `<ol>` tag will change the way the ordered list is presented. Classes should not be mixed and matched.
+
+||loweralpha||Uses lowercase letters for the list||
+||upperalpha||Uses capital letters for the list||
+
