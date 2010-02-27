@@ -33,3 +33,7 @@ If you had chosen these four libraries instead of Frame, you would use more band
 That's cool too! Check out this page: [http://frame.serverboy.net/build]
 
 You can use that to build a custom implementation.
+
+*Why does my browser report warnings in the CSS?*
+
+All browsers don't work the same way, and so some browsers require special code to make them work. Frame does not use invalid CSS hacks (hacks that break the CSS syntax), though we do include proprietary CSS descriptors (such as `-moz-border-radius`). Other browsers may use descriptor values that other browsers do not support. For instance, Opera and WebKit respond to `padding:initial`, while Gecko-based browsers do not.
