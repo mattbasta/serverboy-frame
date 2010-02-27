@@ -1,7 +1,7 @@
 #summary Documentation for Frame features
 #labels Featured,Phase-Deploy,Phase-Implementation
 
-<wiki:toc max_depth="3" />
+<wiki:toc max_depth="4" />
 
 = Getting Started =
 
@@ -167,3 +167,26 @@ A column is also able to "shove" proceeding columns to the right (effectively in
 }}}
 
 The above example fills the whole default container with two four unit columns. The first column shoves the second column right by four units.
+
+=== Percent Grid ===
+
+A simple implementation for grid percentages is also in place. Identical to the usage of the grid layout (`g1-11`, `gfirst`, and `glast`), this layout technique uses the following classes:
+
+||`gquarter`||Represents one quarter of the width of the page. Equivalent to `g3` in the default container.||
+||`gthird`||Represents one quarter of the width of the page. Equivalent to `g4` in the default container.||
+||`ghalf`||Represents one half of the width of the page. Equivalent to `g6` in the default container.||
+
+These are especially useful in scenarios where the default container is not the usual width or for inside other columns (whose widths are not known).
+
+Grid columns should not be used inside percent columns.
+
+There is no shoving allowed on percent columns. There are no multiple-unit percent columns (i.e.: two thirds, three quarters, etc.).
+
+==== Percent Gutters ====
+
+By default, the gutter width for percent-based columns is 5% between columns and 2.5% along the edges of the default container.
+
+The following configuration parameters are available to control gutter width on percent-based columns:
+
+||gg25pg||A 2.5% gutter between columns and a 1.25% gutter along the edge of the default container||
+||gg0g||No gutter _Note that this is the same parameter for grid columns_||
