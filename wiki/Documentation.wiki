@@ -396,6 +396,39 @@ When creating a group of check boxes, they can be easily organized into a list u
 </div>
 }}}
 
+=== File Upload ===
+
+A file upload control can be expressed with the following code.
+
+{{{
+<p class="upload">
+    <label for="file1">File Upload Label</label>
+    <input type="file" name="file1" />
+</p>
+}}}
+
+Additional information can be provided to the user in the form of a supplementary message or a tiny label.
+
+{{{
+<p class="upload">
+    <label for="file1">File Upload</label>
+    <input type="file" name="file1" />
+    <small>Tiny label</small>
+    <span>Supplementary message</span>
+</p>
+}}}
+
+=== Buttons ===
+
+Buttons can be created as they normally would with standard HTML. Frame will automatically style them accordingly.
+
+{{{
+<input type="submit" value="Submit" />
+<input type="reset" value="Reset" />
+<input type="button" value="Button" />
+<button>This is a button</button>
+}}}
+
 === Form Layout ===
 
 To arrange form elements horizontally, you are free to use any of the standard layout libraries along with some of these form-only layout techniques.
