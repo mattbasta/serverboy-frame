@@ -396,6 +396,8 @@ When creating a group of check boxes, they can be easily organized into a list u
 </div>
 }}}
 
+Check groups can be nested safely. A `2em` indent will be applied to nested check groups.
+
 === File Upload ===
 
 A file upload control can be expressed with the following code.
