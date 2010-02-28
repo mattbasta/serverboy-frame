@@ -13,9 +13,9 @@ Consider this: how much time will you spend debugging a site layout to work acro
 
 *What kind of overhead can I experience with Frame?*
 
-When it is gzipped, Frame is under 15kb. On a broadband connection, this can take less than 100ms to load.
+When it is gzipped, Frame is about 15kb. On a broadband connection, this can take less than 100ms to load.
 
-*Some other CSS libraries are under [insert ridiculously low number here]kb. Why is Frame so big?*
+*Some other CSS libraries are under {insert ridiculously low number here}kb. Why is Frame so big?*
 
 In comparison, Frame may seem very large. At the same time, we provide the functionality of many CSS libraries combined together. For instance, consider the following scenario:
 
