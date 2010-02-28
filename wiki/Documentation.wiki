@@ -265,6 +265,116 @@ Ordered lists use numbering by default. Adding the following classes to the `<ol
 ||loweralpha||Uses lowercase letters for the list||
 ||upperalpha||Uses capital letters for the list||
 
+== Forms ==
+
+Forms are one of the most powerful means of interacting with users, and Frame contains one of the best form libraries around.
+
+=== Text Boxes ===
+
+Use the following syntax to create a text box.
+
+{{{
+<label for="text1">Textbox</label>
+<input type="text" value="" name="text1" />
+}}}
+
+To add a tiny label to the textbox, add a `<small>` tag after the input.
+
+{{{
+<label for="text1">Textbox</label>
+<input type="text" value="" name="text1" />
+<small>This is a textbox.</small>
+}}}
+
+=== Radio Groups ===
+
+A radio group is a list of radio buttons that are grouped together in a list. To create a radio group, use the following syntax:
+
+{{{
+<div class="radiogroup">
+	<label for="radio1">Radio Buttons</label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 1</span></label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 2</span></label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 3</span></label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 4</span></label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 5</span></label>
+</div>
+}}}
+
+Note that the input for a radio button must be inside the `<label>`. Also note that there is a space between the `<input>` and the `<span>`.
+
+To add a tiny label, place the `<small>` tag inside the `<label>`.
+
+{{{
+<div class="radiogroup">
+	<label for="radio1">Radio Buttons</label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 1</span><small>This is the tiny label</small></label>
+...
+}}}
+
+=== Dropdowns/Combo Boxes ===
+
+To create a simple dropdown box, use the following syntax.
+
+{{{
+<label for="dropdown1">Dropdown</label>
+<select name="dropdown1">
+	<option>Value</option>
+	<option>Value</option>
+	<option>Value</option>
+	<option>Value</option>
+	<option>Value</option>
+</select>
+<small>This is a dropdown.</small>
+}}}
+
+If using the dropdown inside a `<p class="inliner">` element, the following syntax may be used to hide the label text until the user hovers over the control.
+
+{{{
+<label for="dropdown1">
+    <select name="dropdown1">
+        <option>Value</option>
+        <option>Value</option>
+        <option>Value</option>
+        <option>Value</option>
+        <option>Value</option>
+    </select>
+    <span class="hidden">This is a hover-only label</span>
+</label>
+}}}
+
+Note that with this syntax, tiny labels are not allowed.
+
+=== Checkboxes ===
+
+To create a checkbox, use the following syntax,
+
+{{{
+<label>
+	<input type="checkbox" class="checkbox" value="c1" name="check1" />
+	<span>Check 1</span>
+	<small>This is a checkbox.</small>
+</label>
+}}}
+
+==== Check Group ====
+
+When creating a group of check boxes, they can be easily organized into a list using a check group.
+
+{{{
+<div class="checkgroup">
+    <label>
+        <input type="checkbox" class="checkbox" value="c1" name="check1" />
+        <span>Check 1</span>
+        <small>This is a checkbox.</small>
+    </label>
+    <label><input type="checkbox" class="checkbox" value="c3" name="check3" /> <span>Check 3</span></label>
+    <label><input type="checkbox" class="checkbox" value="c4" name="check4" /> <span>Check 4</span></label>
+    <label><input type="checkbox" class="checkbox" value="c5" name="check5" /> <span>Check 5</span></label>
+    <label><input type="checkbox" class="checkbox" value="c6" name="check6" /> <span>Check 6</span></label>
+</div>
+}}}
+
 == Code ==
 
 When displaying code, it is often useful to highlight the syntax. Frame has built in support for syntax highlighting. To enable syntax highlighting, add the following configuration parameter to the body class:
