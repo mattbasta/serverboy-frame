@@ -34,10 +34,6 @@ h6 {font-size:1em;}
 .half-headers h6 {font-size:1em;}
 
 pre {font-size:1em;}
-.use-code pre,
-.use-code code {
-	font-family:Consolas, Courier New, Courier, monospace;
-}
 
 .single-spaced p,
 ul, ol {margin-bottom:0.5em;}

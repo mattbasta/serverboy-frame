@@ -80,14 +80,6 @@ hr {clear:both;}
 	display:inline;
 }
 
-.clear,
-.cleargap {
-	clear:both;
-	font-size:0;
-	line-height:1em;
-}
-.cleargap {height:1em;}
-
 
 @page {
 	size:8.5in 11in;
