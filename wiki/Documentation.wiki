@@ -215,6 +215,18 @@ The following configuration parameters are available for a page. These propertie
 ||verdana||Loads Verdana||
 ||monospace||Loads an OS-friendly monospace font||
 
+=== Simple Formatting ===
+
+The following classes can be applied to any element as a shortcut for adding formatting.
+
+||Class||Function||
+||f_b||Bold||
+||f_i||Italic||
+||f_u||Underline||
+||f_s||Strikethrough||
+||f_sps||Superscript||
+||f_sbs||Subscript||
+
 === Headers ===
 
 Header tags will automatically be sized logarithmically, though other configurations are available:
@@ -338,4 +350,3 @@ Inline dialogs can be any element, including forms.
     </p>
 </form>
 }}}
-
