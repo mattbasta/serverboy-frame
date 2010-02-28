@@ -135,6 +135,9 @@ form p.unit {
 	margin-bottom:1em;
 	font-size:1.15em;
 	line-height:2em;
+	border:1px solid #aaa;
+	padding:0 0.35em;
+	float:left;
 }
 * html form p.money, 
 * html form p.unit {
@@ -142,28 +145,22 @@ form p.unit {
 	margin-top:5px;
 }
 form p.money span,
-form p.unit span {
-	margin:0;
-	border:1px solid #aaa;
-	padding:0.35em;
-}
-form p.money span span,
-form p.money span input,
-form p.unit span span,
-form p.unit span input {
+form p.money input,
+form p.unit span,
+form p.unit input {
 	vertical-align:baseline;
 	border:0;
 	padding:0;
 }
-form p.money span input,
-form p.unit span input {
+form p.money input,
+form p.unit input {
 	border:0;
 	margin:0;
 	padding:0;
 	font-size:1.15em;
 	border-bottom:1px dotted #ccc;
 }
-form p.unit span input {
+form p.unit input {
 	text-align:right;
 }
 
