@@ -285,3 +285,57 @@ Here's a sample from the demo page:
 }}}
 
 Note: some browsers will add an extra line break if you don't start your code block immediately after the opening `<code>` tag. Plan accordingly.
+
+== Common Controls ==
+
+=== Tabs ===
+
+Tabs are a commonly used interface element, and Frame makes it easy to display simple tabs in the most efficient way possible. Create a UL/LI structure as follows:
+
+{{{
+<ul class="tabs">
+    <li class="current"><a href="#">Tab 1</a></li>
+    <li><a href="#">Tab 2</a></li>
+    <li><a href="#">Tab 3</a></li>
+    <li><a href="#">Tab 4</a></li>
+</ul>
+}}}
+
+This will automagically create a set of tabs from the UL/LI structure. Marking an `<li>` element as "current" will make it the current tab (the tab highlighted and drawn to the forefront).
+
+=== Inline Dialogs ===
+
+The following classes can be applied to any element to turn it into an inline dialog. You should not mix and match classes.
+
+||Class||Description||Appearance||
+||warning_box||Warning||Red border along the top||
+||notice_box||Notice||Gray border along the top||
+||success_box||Success||Green border along the top||
+||login||Login||Yellow border along the left; extra margins||
+
+The structure of the element should be as follows:
+
+{{{
+<div class="...">
+    <strong>Title of the dialog</strong>
+    <p>Body text of the dialog can go right in here.</p>
+</div>
+}}}
+
+Inline dialogs can be any element, including forms.
+
+{{{
+<form action="#" method="post" class="...">
+    <strong>Warning!</strong>
+    <p>By clicking "Delete" you will permananently deleting the entry <tt>Blueprint CSS</tt>.</p>
+    <label>
+        <input type="checkbox" class="checkbox" value="sure" name="sure" />
+        <span>I am sure I wish to do this.</span>
+        <small>This action cannot be un-done.</small>
+    </label>
+    <p class="buttons">
+        <input type="submit" value="Delete" class="submit" name="submit" /><input type="submit" value="Cancel" class="submit" name="cancel" />
+    </p>
+</form>
+}}}
+
