@@ -10,7 +10,7 @@ form label {
 	position:relative;
 }
 form label * {z-index:3;}
-form hr {
+form hr { /*Remember that this still clears*/
 	color:#aaa;
 	background:#aaa;
 	border:0;
@@ -36,7 +36,7 @@ form label textarea,
 form label input,
 form label select {font-size:1em;}
 form input[type="hidden"],
-form input.hidden {display:none !important;}
+form input.hidden {display:none !important;} /*Once again, get rid of the silly classes once IE6 is gone*/
 
 /* Checkboxes/Radio */
 form label span {
@@ -58,6 +58,7 @@ form input[type="radio"] {
 	margin:0 0.5em 0 0;
 	padding:0;
 }
+/*Just an IE6 tweak (since they don't like attribute selectors).*/
 form input.checkbox,
 form input.radio {width:1em;float:left;border:0;}
 
@@ -68,7 +69,7 @@ form textarea {
 
 /* Buttons */
 
-form input.reset,
+form input.reset, /* When IE6 support is fully dropped, get rid of these silly classes */
 form input.button,
 form input.submit,
 button {
@@ -83,9 +84,9 @@ button {
 	line-height:1em;
 }
 
-form input.reset::-moz-focus-inner,
-form input.button::-moz-focus-inner,
-form input.submit::-moz-focus-inner,
+form input[type="reset"]::-moz-focus-inner,
+form input[type="button"]::-moz-focus-inner,
+form input[type="submit"]::-moz-focus-inner,
 button::-moz-focus-inner { 
     border: 0!important;
     padding: 0!important;
