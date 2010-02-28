@@ -47,7 +47,7 @@ form small {
 form label small {
 	display:block;
 	font-size:0.75em;
-	float:left;
+	/*float:left;*/
 	clear:left;
 	margin:0 0 0.5em;
 	padding-left:2em;
