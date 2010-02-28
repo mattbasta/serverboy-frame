@@ -27,6 +27,13 @@
 	h3 {font-size:1.70em!important;}
 	h4 {font-size:1.41em!important;}
 	h5 {font-size:1.19em!important;}
+	ul, ol {padding-left:0.5in !important;}
+	ul li {list-style:disc;}
+	ul li li {list-style:circle;}
+	ul li li li {list-style:square;}
+	ol li {list-style:decimal;}
+	ol li li {list-style:lower-alpha;}
+	ol li li li {list-style:lower-roman;}
 	th,td {
 		border:1px solid #000!important;
 		padding:0.5em 0.125em!important;

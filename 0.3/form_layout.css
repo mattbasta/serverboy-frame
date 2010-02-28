@@ -31,7 +31,7 @@ form .radiogroup {
 }
 form .checkgroup label,
 form .radiogroup label {
-	height:1.5em;
+	zoom:1; /*A hack for IE7*/
 }
 form .checkgroup p {margin:0}
 form .checkgroup .checkgroup {padding-left:2em;margin:0;}
@@ -63,7 +63,6 @@ form label span.hidden {
 	border:1px solid #aaa;
 	border-radius:0 3px 3px;
 	-moz-border-radius:0 3px 3px;
-	-webkit-border-radius:0 3px 3px;
 	line-height:1.5em;
 	margin-top:-1px;
 }
@@ -78,10 +77,10 @@ form fieldset {
 	border:1px solid #aaa;
 	border-radius:0.4em;
 	-moz-border-radius:0.4em;
-	-webkit-border-radius:0.4em;
 	padding:1em 1em 0;
 	margin:1em 0;
 	position:relative;
+	clear:left;
 }
 * html form fieldset {padding-top:0;}
 form fieldset legend {

@@ -6,6 +6,9 @@ body.left {text-align:left;}
 		padding:1in;
 		margin:0 auto;
 	}
+	* html #paper {
+		width:8.5in;
+	}
 }
 @media print {
 	#print_overflow {
