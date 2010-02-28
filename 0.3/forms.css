@@ -42,7 +42,7 @@ form input.hidden {display:none !important;} /*Once again, get rid of the silly 
 form label span {
 	padding:0.25em 0;
 	display:block;
-	float:left;
+	/*float:left;*/
 }
 form label input {
 	display:inline;

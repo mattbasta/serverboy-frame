@@ -54,7 +54,7 @@ foreach($includes as $include) {
 $output = Minify_CSS_Compressor::process($output);
 
 header('Last-Modified: ' . gmdate('D, d M Y H:i:s', $lastMod) . ' GMT');   
-$output = str_replace(';}','}',$output);
+$output = str_replace("\n",' ',$output);
 $output = trim($output);
 
 $header = <<<HEADER
