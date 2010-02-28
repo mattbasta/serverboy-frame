@@ -12,7 +12,7 @@
 ||Typography||Buggy||Yes||Yes||
 ||Layout||Yes||Yes||Yes||
 ||Controls||Yes||Yes||Yes||
-||Forms||Limited||Buggy||Yes||
+||Forms||Limited||Yes||Yes||
 ||Tables||Yes||Yes||Yes||
 ||Form Layout||Yes||Yes||Yes||
 ||Paper Layout||Limited||Limited||Limited||
@@ -20,7 +20,6 @@
 
 
   * IE6 has limited form support, but it renders correctly. Some visual features may not be implemented, but will degrade gracefully.
-  * IE7 may render labels incorrectly in the Forms module.
 
 The paper layout will not paginate in sheets in IE.
 
