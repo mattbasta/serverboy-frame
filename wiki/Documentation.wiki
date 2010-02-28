@@ -286,7 +286,28 @@ To add a tiny label to the textbox, add a `<small>` tag after the input.
 <small>This is a textbox.</small>
 }}}
 
-=== Radio Groups ===
+=== Radio Buttons ===
+
+A simple radio button can be created with the following syntax.
+
+{{{
+<label>
+    <input class="radio" type="radio" value="r1" name="radio1" />
+    <span>Option 1</span>
+</label>
+}}}
+
+A tiny label can be added by adding a `<small>` element to the end of the `<label>`.
+
+{{{
+<label>
+    <input class="radio" type="radio" value="r1" name="radio1" />
+    <span>Option 1</span>
+    <small>This is the tiny label</small>
+</label>
+}}}
+
+==== Radio Groups ====
 
 A radio group is a list of radio buttons that are grouped together in a list. To create a radio group, use the following syntax:
 
@@ -373,6 +394,78 @@ When creating a group of check boxes, they can be easily organized into a list u
     <label><input type="checkbox" class="checkbox" value="c5" name="check5" /> <span>Check 5</span></label>
     <label><input type="checkbox" class="checkbox" value="c6" name="check6" /> <span>Check 6</span></label>
 </div>
+}}}
+
+=== Form Layout ===
+
+To arrange form elements horizontally, you are free to use any of the standard layout libraries along with some of these form-only layout techniques.
+
+==== Fieldset ====
+
+To create a fieldset, use the following syntax. Any form elements can be placed in a fieldset just as they normally would be placed inside a `<form>` element.
+
+{{{
+<fieldset>
+    <legend>The fieldset legend</legend>
+    ...
+</fieldset>
+}}}
+
+==== Horizontal Inliner ====
+
+A horizontal inliner organizes a list of controls horizontally. If you wish to use the "hover-only" labels mentioned above, you must place the `<input>` in your `<label>` and wrap your label text in a `<span>`.
+
+{{{
+<p class="inliner">
+    <label for="horiz_search">Search</label>
+    <input type="text" name="horiz_search" />
+    <label>
+        <span class="hidden">Search Type</span>
+        <select name="horiz_search_type">
+            <option value="web">Web</option>
+            <option value="images">Images</option>
+            <option value="video">Video</option>
+        </select>
+    </label>
+</p>
+}}}
+
+==== Horizontal Buttons ====
+
+When arranging buttons horizontally, instead of using a horizontal inliner, use a horizontal button element.
+
+{{{
+<p class="buttons">
+    <input type="submit" value="Submit" class="submit" /><button>Action Button</button>
+</p>
+}}}
+
+Note that placing extra spaces between the buttons may disrupt the flow of the buttons.
+
+== Composite Form Elements ==
+
+There are some form elements which cannot be created with standard HTML alone. These controls require extra markup, though are just as simple to implement.
+
+=== Currency Box ===
+
+A currency box places a currency symbol on the inside of the text box as a unit indicator. This can be created with the following syntax.
+
+{{{
+<p class="money">
+    <span>$</span>
+    <input type="text" name="currency" value="" />
+</p>
+}}}
+
+=== Unit Box ===
+
+A unit box is similar to a currency box, except instead of placing a currency symbol on the inside of the text box, a word or phrase can be appended to the end of the text box. Also, text in the text box is aligned to the right. This can be created with the following syntax.
+
+{{{
+<p class="unit">
+    <input type="text" name="unit" value="" />
+    <span>meters</span>
+</p>
 }}}
 
 == Code ==
