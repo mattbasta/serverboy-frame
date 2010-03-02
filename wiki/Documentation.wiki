@@ -519,6 +519,7 @@ To use syntax highlighting, the following classes should be placed on `<span>` t
 
 ||Class||Represents||Description||Alternate||
 ||cs||Code Structure||Represents a structure of the code (i.e.: a reserved word; for, while, etc.)||`<tt>`||
+||f||Function||Represents the name of a function||`b`||
 ||cm||Comment||Represents commented code||||
 ||v||Variable||Represents a variable||`<var>`||
 ||l||Literal||Represents a literal value||`<kbd>`||
@@ -528,8 +529,8 @@ Here's a sample from the demo page:
 
 {{{
 <code><span class="cm">// This is a comment.</span>
-<span class="cs">function</span> foo(<span class="v">$bar</span>) {
-	<span class="cs">echo</span> <span class="v">$bar</span>, <span class="l">" is a pretty cool guy that "</span>;
+<span class="cs">function</span> <b>foo</b>(<span class="v">$bar</span>) {
+	<span class="cs">echo</span> <var>$bar</var>, <kbd>" is a pretty cool guy that "</kbd>;
 }
 </code>
 }}}
