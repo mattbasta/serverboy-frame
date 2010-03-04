@@ -15,13 +15,13 @@
 ||Forms||Limited||Yes||Yes||
 ||Tables||Yes||Yes||Yes||
 ||Form Layout||Yes||Yes||Yes||
-||Paper Layout||Limited||Limited||Limited||
+||Paper Layout||No||Limited||Limited||
 ||Print||Yes||Yes||Yes||
 
 
   * IE6 has limited form support, but it renders correctly. Some visual features may not be implemented, but will degrade gracefully.
 
-The paper layout will not paginate in sheets in IE.
+The paper layout will not paginate in sheets in IE. IE6 does not support paper layouts at all.
 
 == Firefox ==
 
