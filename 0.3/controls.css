@@ -25,7 +25,8 @@ Tabs
 	margin-right:-1px;
 }
 .tabs li a:hover {background:#fcfcfc}
-.tabs li.current a {
+.tabs li.current a,
+.tabs li.ui-tabs-selected a {
 	padding:0.5em 1em 0.475em;
 	font-size:1em;
 	background:#fff;

@@ -171,10 +171,14 @@ hr {clear:both;}
 .gg0g #container .s11 {margin-right:880px;}
 
 
+
+.alignleft {float:left;}
+.alignright {float:right;}
+
 .clear,
 .cleargap {
 	clear:both;
-	font-size:0;
 	line-height:1em;
 }
+.clear {font-size:0;}
 .cleargap {height:1em;}

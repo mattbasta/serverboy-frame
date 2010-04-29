@@ -4,8 +4,8 @@ form ol.group li label,
 form ol.group li input,
 form ol.group li select,
 form ol.group li button,
-form p.money *, /* Dependency */
-form p.unit *, /* Dependency */
+form .money *, /* Dependency */
+form .unit *, /* Dependency */
 form p.inliner * {
 	display:inline;
 	margin:0 0.5em 0 0;

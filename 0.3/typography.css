@@ -58,7 +58,9 @@ pre,
 blockquote,
 .single-spaced p,
 .single-spaced ul,
-.single-spaced ol {line-height:1.25em;}
+.single-spaced ol,
+.single-spaced ul li,
+.single-spaced ol li {line-height:1.25em;}
 
 dl.indent dd {padding-left:0.5in;}
 dl.bold dt {font-weight:bold;}
