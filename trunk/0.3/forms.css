@@ -130,8 +130,8 @@ Currency/Unit Control
 	</span>
 </p>
 */
-form p.money,
-form p.unit {
+form .money,
+form .unit {
 	margin-bottom:1em;
 	font-size:1.15em;
 	line-height:2em;
@@ -139,28 +139,28 @@ form p.unit {
 	padding:0 0.35em;
 	float:left;
 }
-* html form p.money, 
-* html form p.unit {
+* html form .money, 
+* html form .unit {
 	padding:0;
 	margin-top:5px;
 }
-form p.money span,
-form p.money input,
-form p.unit span,
-form p.unit input {
+form .money span,
+form .money input,
+form .unit span,
+form .unit input {
 	vertical-align:baseline;
 	border:0;
 	padding:0;
 }
-form p.money input,
-form p.unit input {
+form .money input,
+form .unit input {
 	border:0;
 	margin:0;
 	padding:0;
 	font-size:1.15em;
 	border-bottom:1px dotted #ccc;
 }
-form p.unit input {
+form .unit input {
 	text-align:right;
 }
 
@@ -202,6 +202,13 @@ form .uploadpreview {
 	-moz-border-radius:5px;
 	padding:0.5em;
 }
+
+form input[type="image"] {
+	border:0;
+	padding:0;
+	width:auto;
+}
+
 
 
 .formerror {

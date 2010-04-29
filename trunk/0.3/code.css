@@ -19,10 +19,15 @@ body.use-code code .cs { /**/
 	color:#00f;
 	font-weight:bold;
 }
+body.use-code code b,
+body.use-code code .f { /**/
+	color:#008;
+	font-weight:normal;
+}
 body.use-code code .cm {color:#080;} /*Comment*/
 body.use-code code var,
-body.use-code code .v {color:#008;} /*Variable*/
+body.use-code code .v {color:#008;font-style:normal;} /*Variable*/
 body.use-code code kbd,
 body.use-code code .l {color:#888;} /*Literal*/
 body.use-code code samp,
-body.use-code code .n {color:#800;} /*Literal*/
+body.use-code code .n {color:#800;} /*Numeric Literal*/
