@@ -607,3 +607,9 @@ Inline dialogs can be any element, including forms.
     </p>
 </form>
 }}}
+
+== Table Styles ==
+
+Tables, by default, use a simple theme that only includes vertical separators. To activate horizontal separators, simply add `class="grid"` to the table.
+
+Horizontal separators for tables are not default or APA or print styles.
