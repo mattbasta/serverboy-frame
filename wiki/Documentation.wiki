@@ -13,7 +13,7 @@ There are three ways that you can get a copy of Frame. The first is to get it fr
 
 The second way is to download a custom build from [http://frame.serverboy.net/build the homepage]. This allows you to include only the features that you want.
 
-The last way is to hotlink against the latest build. This way can result in problems, however, as changes to the build will be reflected on your site. Feature additions and removals can cause your site to break. You can do this by linking your stylesheet to http://frame.serverboy.net/latest/
+The last way is to hotlink against the latest build. This way can result in problems, however, as changes to the build will be reflected on your site. Feature additions and removals can cause your site to break. You can do this by linking your stylesheet to http://framecdn.serverboy.net/latest.css
 
 == Step 2: Including Frame ==
 
@@ -31,7 +31,7 @@ If you are hotlinking, you can use this code:
 {{{
 <head>
 <title>My page's title</title>
-<link type="text/css" rel="stylesheet" href="http://frame.serverboy.net/latest/" />
+<link type="text/css" rel="stylesheet" href="http://framecdn.serverboy.net/latest.css" />
 </head>
 }}}
 
