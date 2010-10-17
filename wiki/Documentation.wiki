@@ -176,6 +176,22 @@ A column is also able to "shove" proceeding columns to the right (effectively in
 
 The above example fills the whole default container with two four unit columns. The first column shoves the second column right by four units.
 
+==== Prefixing ====
+
+Columns can shove themselves by using prefixes. A prefix is essentially shoving from the left instead of the right.
+
+{{{
+
+<div id="container">
+    <section class="g4 p4"> ... </section>
+    <nav class="g4"> ... </nav>
+    <div class="clear"></div>
+</div>
+
+}}}
+
+The above example fills the whole default container with two four unit columns. The first column is shoved right four units.
+
 === Percent Grid ===
 
 A simple implementation for grid percentages is also in place. Identical to the usage of the grid layout (`g1-11`, `gfirst`, and `glast`), this layout technique uses the following classes:
