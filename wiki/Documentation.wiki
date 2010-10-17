@@ -229,17 +229,19 @@ The following classes can be applied to any element as a shortcut for adding for
 
 === Headers ===
 
-Header tags will automatically be sized logarithmically, though other configurations are available:
+Header tags will automatically be sized to a useful default, though other configurations are available:
 
-||Tag||_default_||quarter-headers||third-headers||half-headers||
-||h1||2.8em||2.25em||2.66em||3.5em||
-||h2||2.11em||2em||2.33em||3em||
-||h3||1.7em||1.75em||2em||2.5em||
-||h4||1.41em||1.5em||1.66em||2em||
-||h5||1.19em||1.25em||1.33em||1.5em||
-||h6||1em||1em||1em||1em||
+||Tag||_default_||quarter-headers||
+||h1||2em||2em||
+||h2||1.7em||1.75em||
+||h3||1.4em||1.5em||
+||h4||1.3em||1.25em||
+||h5||1.2em||1em||
+||h6||1.1em||0.75em||
 
 All headers are bold by default.
+
+HTML5 support is available. This allows the use of nested `<section>` tags to automatically style `<h1>` elements. This does not apply for any other header element.
 
 === Text-Level Elements ===
 
