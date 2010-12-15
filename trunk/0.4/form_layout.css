@@ -1,0 +1,98 @@
+form ol.group li,
+form p.inliner {margin-bottom:1em;}
+form ol.group li label,
+form ol.group li input,
+form ol.group li select,
+form ol.group li button,
+form .money *, /* Dependency */
+form .unit *, /* Dependency */
+form p.inliner * {
+	display:inline;
+	margin:0 0.5em 0 0;
+	vertical-align:middle;
+}
+form p.inliner option {display:block;margin:0;}
+
+form p.buttons {
+	padding:0.5em 0 1em;
+	margin:0;
+	clear:left;
+}
+
+form p.buttons input,
+form p.buttons button {
+	margin:0 0.5em 0 0;
+	display:inline;
+}
+
+form .checkgroup,
+form .radiogroup {
+	margin-bottom:1em;
+}
+form .checkgroup label,
+form .radiogroup label {
+	zoom:1; /*A hack for IE7*/
+}
+form .checkgroup p {margin:0}
+form .checkgroup .checkgroup {padding-left:2em;margin:0;}
+
+form small {
+	margin-top:-1em;
+	margin-bottom:1em;
+	display:block;
+	clear:left;
+	font-size:0.85em;
+	color:#999;
+}
+form label small {
+	display:block;
+	font-size:0.75em;
+	/*float:left;*/
+	clear:left;
+	margin:0 0 0.5em;
+	padding-left:2em;
+}
+
+form label span.hidden {
+	display:none;
+	position:absolute;
+	left:0;
+	float:left;
+	padding:0.2em;
+	background:#f5f5f5;
+	border:1px solid #aaa;
+	border-radius:0 3px 3px;
+	-moz-border-radius:0 3px 3px;
+	line-height:1.5em;
+	margin-top:-1px;
+}
+form label:hover span.hidden {
+	display:block;
+}
+
+
+/* Explanations */
+
+form fieldset {
+	border:1px solid #aaa;
+	border-radius:0.4em;
+	-moz-border-radius:0.4em;
+	padding:1em 1em 0;
+	margin:1em 0;
+	position:relative;
+	clear:left;
+}
+* html form fieldset {padding-top:0;}
+form fieldset legend {
+	font-size:1.2em;
+	padding:0 0.25em;
+	margin:0 0 0 -0.25em;
+	background:#fff;
+}
+* html form fieldset legend {margin-bottom:1.2em;}
+* html form fieldset legend {
+	margin-bottom:1em;
+	position:relative;
+	left:-0.5em;
+}
+

@@ -1,0 +1,50 @@
+body.sm {font-size:70%;}
+body,
+body.med {font-size:80%;}
+body.lg {font-size:90%;}
+body.xl {font-size:100%;}
+
+body.serif {font-family:Cambria,Times New Roman,Times,serif;}
+body.times,
+body.times-new-roman {font-family:Times New Roman,Times,serif;}
+body.georgia {font-family:Georgia,Times,serif;}
+
+body.sans-serif {font-family:Arial,Helvetica,sans-serif;}
+body.verdana {font-family:Verdana,Arial,Helvetica,sans-serif;}
+
+ul,
+ol {padding-left:5ex;}
+ul {list-style:disc;}
+ul ul {list-style:square;}
+ul ul ul {list-style:circle;}
+ol {list-style:decimal;}
+ol ol {list-style:lower-alpha;}
+ol ol ol {list-style:lower-roman;}
+
+small {font-size:0.8em;}
+address {
+	padding:0 1em;
+	margin-left:1em;
+	margin-right:1em;
+}
+
+b {font-weight:bold;}
+i,
+cite,
+var,
+em {font-style:oblique;}
+
+ins {text-decoration: underline;}
+del {text-decoration: line-through;}
+
+sup {vertical-align:super;}
+sub {vertical-align:sub;}
+sup, sub {font-size:0.7em;}
+
+big {font-size:1.2em;}
+abbr,
+acronym {
+	font-size:1.25ex;
+	letter-spacing:0.08em;
+	text-transform:uppercase;
+}

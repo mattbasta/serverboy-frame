@@ -1,0 +1,73 @@
+hgroup,
+h1,h2,h3,h4,h5,h6 {clear:both;font-weight:bold;}
+
+h1 {font-size:2em;}
+h2 {font-size:1.7em;}
+h3 {font-size:1.4em;}
+h4 {font-size:1.3em;}
+h5 {font-size:1.2em;}
+h6 {font-size:1.1em;}
+
+section h1 {font-size:1.7em;}
+section section h1 {font-size:1.4em;}
+section section section h1 {font-size:1.3em;}
+section section section section h1 {font-size:1.2em;}
+section section section section section h1 {font-size:1.1em;}
+
+.quarter-headers h1 {font-size:2em;}
+.quarter-headers h2 {font-size:1.75em;}
+.quarter-headers h3 {font-size:1.5em;}
+.quarter-headers h4 {font-size:1.25em;}
+.quarter-headers h5 {font-size:1em;}
+.quarter-headers h6 {font-size:0.75em;}
+
+pre {font-size:1em;}
+
+.single-spaced p,
+ul, ol {margin-bottom:0.5em;}
+
+p,
+ul, ol, dl,
+address,
+pre,
+code,
+table,
+p {margin-bottom:1em;}
+
+p,
+dl,
+ul li,
+ol li {line-height:2em;}
+
+address {line-height:1.75em;}
+
+code,
+pre,
+blockquote,
+.single-spaced p,
+.single-spaced ul,
+.single-spaced ol,
+.single-spaced ul li,
+.single-spaced ol li {line-height:1.25em;}
+
+dl.indent dd {padding-left:0.5in;}
+dl.bold dt {font-weight:bold;}
+
+blockquote {
+	padding:0 0 0 0.5in;
+	margin:1em 0;
+}
+
+code {
+	display:block;
+	white-space:pre;
+	font-size:1em;
+}
+p code {
+	margin:0;
+	white-space:normal;
+	display:inline;
+}
+
+ol.loweralpha {list-style-type:lower-alpha;}
+ol.upperalpha {list-style-type:upper-alpha;}

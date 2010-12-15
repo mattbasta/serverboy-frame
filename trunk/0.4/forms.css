@@ -1,0 +1,217 @@
+* form,
+form ul,
+form ol,
+form li {line-height:1em !important;}
+
+form label {
+	display:block;
+	font-size:1.1em;
+	clear:left;
+	position:relative;
+}
+form label * {z-index:3;}
+form hr { /*Remember that this still clears*/
+	color:#aaa;
+	background:#aaa;
+	border:0;
+	height:1px;
+	margin:0 0 1em;
+}
+
+
+/* Generic Controls */
+form input {width:175px;}
+form textarea,
+form input,
+form select {
+	display:block;
+	clear:left;
+	margin-bottom:1em;
+	padding:4px;
+	font-size:1.2em;
+	border:1px solid #aaa;
+	overflow:visible;
+}
+form label textarea,
+form label input,
+form label select {font-size:1em;}
+form input[type="hidden"],
+form input.hidden {display:none !important;} /*Once again, get rid of the silly classes once IE6 is gone*/
+
+/* Checkboxes/Radio */
+form label span {
+	padding:0.25em 0;
+	display:block;
+	/*float:left;*/
+}
+form label input {
+	display:inline;
+	vertical-align:middle;
+}
+form input[type="checkbox"],
+form input[type="radio"] {
+	border:0;
+	float:left;
+	height:1.5em;
+	width:1em;
+	font-size:1em;
+	margin:0 0.5em 0 0;
+	padding:0;
+}
+/*Just an IE6 tweak (since they don't like attribute selectors).*/
+form input.checkbox,
+form input.radio {width:1em;float:left;border:0;}
+
+form textarea {
+	height:6em;
+	width:75%;
+}
+
+/* Buttons */
+
+form input.reset, /* When IE6 support is fully dropped, get rid of these silly classes */
+form input.button,
+form input.submit,
+button {
+	margin:5px 0;
+	padding:4px 10px;
+	width:auto;
+	
+	background:#f0f0f0;
+	border:1px solid #aaa;
+	font-size:1.2em;
+	overflow:visible;
+	line-height:1em;
+}
+
+form input[type="reset"]::-moz-focus-inner,
+form input[type="button"]::-moz-focus-inner,
+form input[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner { 
+    border: 0!important;
+    padding: 0!important;
+}
+form input[type="reset"],
+form input[type="button"],
+form input[type="submit"],
+button {
+	border-radius:3px;
+	-moz-border-radius:3px;
+}
+form input[type="reset"]:hover,
+form input[type="button"]:hover,
+form input[type="submit"]:hover,
+button:hover {
+	background:#f6f6f6;
+}
+form input[type="reset"]:active,
+form input[type="button"]:active,
+form input[type="submit"]:active,
+button:active {
+	background:#eaeaea;
+}
+
+
+
+/* Custom Controls */
+
+/*
+Currency/Unit Control
+<p class="money">
+	<span>
+		<span><!-- Currency Symbol --></span>
+		<input type="text" value="" name="..." />
+	</span>
+</p>
+<p class="unit">
+	<span>
+		<input type="text" value="" name="..." />
+		<span><!-- Unit --></span>
+	</span>
+</p>
+*/
+form .money,
+form .unit {
+	margin-bottom:1em;
+	font-size:1.15em;
+	line-height:2em;
+	border:1px solid #aaa;
+	padding:0 0.35em;
+	float:left;
+}
+* html form .money, 
+* html form .unit {
+	padding:0;
+	margin-top:5px;
+}
+form .money span,
+form .money input,
+form .unit span,
+form .unit input {
+	vertical-align:baseline;
+	border:0;
+	padding:0;
+}
+form .money input,
+form .unit input {
+	border:0;
+	margin:0;
+	padding:0;
+	font-size:1.15em;
+	border-bottom:1px dotted #ccc;
+}
+form .unit input {
+	text-align:right;
+}
+
+form .upload {
+	display:inline;
+	line-height:1em;
+	padding:1em 8em 1.5em 0;
+	border:1px solid #aaa;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	border-left:0.3em solid #888;
+	float:left;
+	clear:left;
+}
+form .upload * {padding-left:1em;}
+form .upload input {
+	display:inline;
+	margin-bottom:0;
+	margin:0.75em 0 0.75em 1em;
+	border:initial;
+	width:auto;
+	padding:initial;
+}
+form .upload small {
+	margin-top:0;
+	margin-bottom:0;
+	padding-left:1.2em;
+}
+form .upload span {font-size:1.1em;}
+form .upload .remove {
+	width:auto;
+	padding:0.25em;
+}
+form .uploadpreview {
+	float:left;
+	margin-bottom:0.5em;
+	border:1px solid #aaa;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	padding:0.5em;
+}
+
+form input[type="image"] {
+	border:0;
+	padding:0;
+	width:auto;
+}
+
+
+
+.formerror {
+	font-weight:bold;
+	color:#b00;
+}
