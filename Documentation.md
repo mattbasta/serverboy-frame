@@ -1,0 +1,627 @@
+
+
+# Getting Started #
+
+To get started using Frame, there are only a two steps.
+
+## Step 1: Get Frame ##
+
+There are three ways that you can get a copy of Frame. The first is to get it from the Google [download page](http://code.google.com/p/serverboy-frame/downloads/list). These are frozen copies of Frame that you can even hotlink against.
+
+The second way is to download a custom build from [the homepage](http://frame.serverboy.net/build). This allows you to include only the features that you want.
+
+The last way is to hotlink against the latest build. This way can result in problems, however, as changes to the build will be reflected on your site. Feature additions and removals can cause your site to break. You can do this by linking your stylesheet to http://framecdn.serverboy.net/latest.css
+
+## Step 2: Including Frame ##
+
+Include a `<link />` tag in your page's `<head>` tag:
+
+```
+<head>
+<title>My page's title</title>
+<link type="text/css" rel="stylesheet" href="/path/to/frame.css" />
+</head>
+```
+
+If you are hotlinking, you can use this code:
+
+```
+<head>
+<title>My page's title</title>
+<link type="text/css" rel="stylesheet" href="http://framecdn.serverboy.net/latest.css" />
+</head>
+```
+
+Remember, hotlinking will ensure that your site looks its best in all browsers, but it may also break your layout.
+
+## Optional Step 3: HTML5 Support ##
+
+If you intend to use the features of HTML5 in your site, then you will need to enable these in Internet Explorer. To do this, include the following code in your head tag:
+
+```
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> 
+```
+
+This will enable you to use HTML5 tags in IE.
+
+# Using Frame #
+
+## Configuration ##
+
+All configuration for Frame should be placed in a class on the `<body>` tag as so:
+
+```
+<body class="configuration parameters here">
+```
+
+## Layout ##
+
+When designing your page, all elements should be placed in a default container. A default container is a container that encapsulates your content and provides a starting point for the rest of your layout.
+
+```
+
+<!-- Standard -->
+<div id="container"> ... </div>
+
+<!-- Paper -->
+<article id="paper"> ... </article>
+
+```
+
+Note that the use of `<article>` or `<div>` is not mandatory, but it is recommended.
+
+The layout features of Frame will not apply to elements that are outside of your default container.
+
+### Container Positioning ###
+
+By default, the default container is centered on the page. To align it to the left of the screen, the following configuration parameter is available:
+
+|left|Aligns the default container to the left of the page.|
+|:---|:----------------------------------------------------|
+
+### Clearing ###
+
+After every set of columns in a layout, you must "clear" the layout by placing a clearing `div` after the column set.
+
+```
+
+<div id="container">
+    <section class="g6"> ... </section>
+    <section class="g6"> ... </section>
+    <div class="clear"></div>
+</div>
+
+```
+
+The clearing div in the above example allows for more columns to be placed below the two `<section>` elements. Elements will align against the clearing `<div>` and not against the bottom of the `<section>` elements.
+
+There are two types of clearing elements available. The first is the standard clearing `<div>` as shown above. The second is a "cleargap" `<div>`, which introduces a `1em` gap between the sets of columns.
+
+```
+
+<div id="container">
+    <div class="clear"></div> <!-- Clearing Div -->
+    <div class="cleargap"></div> <!-- Cleargap Div -->
+</div>
+
+```
+
+By default, `<hr />` tags and headers (`h1`-`h6` and `hgroup`) will automatically clear, as well.
+
+### Grid ###
+
+The container can be divided up according to a 12-unit-wide grid. Columns in the grid may be from one to eleven units wide.
+
+The following code creates a column consuming 6 units, one consuming 3 units, one consuming 2 units, and one consuming 1 unit.
+
+```
+
+<div id="container">
+    <section class="g6"> ... </section>
+    <section class="g3"> ... </section>
+    <div class="g2"> ... </div>
+    <nav class="g1"> ... </nav>
+    <div class="clear"></div>
+</div>
+
+```
+
+Note that the elements used to create the grid are inconsequential.
+
+#### Sub-Grids ####
+
+When placing grid elements inside another grid element, you must place the `gfirst` and `glast` classes on the first and last columns (respectively). This preserves the gutters between the columns:
+
+```
+
+<div id="container">
+    <section class="g6">
+        <div class="g2 gfirst"> ... </div>
+        <div class="g2"> ... </div>
+        <div class="g2 glast"> ... </div>
+        <div class="clear"></div>
+    </section>
+    <section class="g3"> ... </section>
+    <div class="g2"> ... </div>
+    <nav class="g1"> ... </nav>
+    <div class="clear"></div>
+</div>
+
+```
+
+#### Gutter Width ####
+
+By default, there is a `20px` "gutter" between each column and a `10px` gutter along the edges of the default container. There are two other options available, which can be set in the configuration of the page (using the `<body>` class):
+
+|gg10g|Reduces the gutter by half (10px between columns and 5px along the container)|
+|:----|:----------------------------------------------------------------------------|
+|gg0g|Eliminates the gutter altogether|
+
+#### Shoving ####
+
+A column is also able to "shove" proceeding columns to the right (effectively increasing the right-hand gutter of the column).
+
+```
+
+<div id="container">
+    <section class="g4 s4"> ... </section>
+    <nav class="g4"> ... </nav>
+    <div class="clear"></div>
+</div>
+
+```
+
+The above example fills the whole default container with two four unit columns. The first column shoves the second column right by four units.
+
+#### Prefixing ####
+
+Columns can shove themselves by using prefixes. A prefix is essentially shoving from the left instead of the right.
+
+```
+
+<div id="container">
+    <section class="g4 p4"> ... </section>
+    <nav class="g4"> ... </nav>
+    <div class="clear"></div>
+</div>
+
+```
+
+The above example fills the whole default container with two four unit columns. The first column is shoved right four units.
+
+### Percent Grid ###
+
+A simple implementation for grid percentages is also in place. Identical to the usage of the grid layout (`g1-11`, `gfirst`, and `glast`), this layout technique uses the following classes:
+
+|`gquarter`|Represents one quarter of the width of the page. Equivalent to `g3` in the default container.|
+|:---------|:--------------------------------------------------------------------------------------------|
+|`gthird`|Represents one quarter of the width of the page. Equivalent to `g4` in the default container.|
+|`ghalf`|Represents one half of the width of the page. Equivalent to `g6` in the default container.|
+
+These are especially useful in scenarios where the default container is not the usual width or for inside other columns (whose widths are not known).
+
+Grid columns should not be used inside percent columns.
+
+There is no shoving allowed on percent columns. There are no multiple-unit percent columns (i.e.: two thirds, three quarters, etc.).
+
+#### Percent Gutters ####
+
+By default, the gutter width for percent-based columns is 5% between columns and 2.5% along the edges of the default container.
+
+The following configuration parameters are available to control gutter width on percent-based columns:
+
+|gg25pg|A 2.5% gutter between columns and a 1.25% gutter along the edge of the default container|
+|:-----|:---------------------------------------------------------------------------------------|
+|gg0g|No gutter _Note that this is the same parameter for grid columns_|
+
+## Typography ##
+
+The following configuration parameters are available for a page. These properties affect the entire page.
+
+|sm|Uses a small font size|
+|:-|:---------------------|
+|med|Uses a medium font size _Default_|
+|lg|Uses a large font size|
+|xl|Uses a very large font size|
+
+|serif/cambria|Loads a default OS-friendly serif font|
+|:------------|:-------------------------------------|
+|times/times-new-roman|Loads a serif font|
+|georgia|Loads Georgia|
+|sans-serif|Loads a default OS-friendly sans-serif font (Arial/Helvetica)|
+|verdana|Loads Verdana|
+|monospace|Loads an OS-friendly monospace font|
+
+### Simple Formatting ###
+
+The following classes can be applied to any element as a shortcut for adding formatting.
+
+|Class|Function|
+|:----|:-------|
+|f\_b|Bold|
+|f\_i|Italic|
+|f\_u|Underline|
+|f\_s|Strikethrough|
+|f\_sps|Superscript|
+|f\_sbs|Subscript|
+
+### Headers ###
+
+Header tags will automatically be sized to a useful default, though other configurations are available:
+
+|Tag|_default_|quarter-headers|
+|:--|:--------|:--------------|
+|h1|2em|2em|
+|h2|1.7em|1.75em|
+|h3|1.4em|1.5em|
+|h4|1.3em|1.25em|
+|h5|1.2em|1em|
+|h6|1.1em|0.75em|
+
+All headers are bold by default.
+
+HTML5 support is available. This allows the use of nested `<section>` tags to automatically style `<h1>` elements. This does not apply for any other header element.
+
+### Text-Level Elements ###
+
+All text is double-spaced by default. To single-space elements, use the following configuration parameter:
+
+|single-spaced|Converts all text to single-spaced|
+|:------------|:---------------------------------|
+
+`<blcokquote>`, `<code>`, and `<pre>` are single-spaced by default.
+
+### Lists ###
+
+#### Definition Lists ####
+
+Definition lists are (by default) entirely unstyled aside from their line height and margining. Adding the following classes to the `<dl>` element will change the way definition list is presented. Classes may be mixed and matched.
+
+|indent|The `dd` tag is indented by `0.5in`|
+|:-----|:----------------------------------|
+|bold|The `dt` tag is made bold|
+
+#### Ordered Lists ####
+
+Ordered lists use numbering by default. Adding the following classes to the `<ol>` tag will change the way the ordered list is presented. Classes should not be mixed and matched.
+
+|loweralpha|Uses lowercase letters for the list|
+|:---------|:----------------------------------|
+|upperalpha|Uses capital letters for the list|
+
+## Forms ##
+
+Forms are one of the most powerful means of interacting with users, and Frame contains one of the best form libraries around.
+
+### Text Boxes ###
+
+Use the following syntax to create a text box.
+
+```
+<label for="text1">Textbox</label>
+<input type="text" value="" name="text1" />
+```
+
+To add a tiny label to the textbox, add a `<small>` tag after the input.
+
+```
+<label for="text1">Textbox</label>
+<input type="text" value="" name="text1" />
+<small>This is a textbox.</small>
+```
+
+### Radio Buttons ###
+
+A simple radio button can be created with the following syntax.
+
+```
+<label>
+    <input class="radio" type="radio" value="r1" name="radio1" />
+    <span>Option 1</span>
+</label>
+```
+
+A tiny label can be added by adding a `<small>` element to the end of the `<label>`.
+
+```
+<label>
+    <input class="radio" type="radio" value="r1" name="radio1" />
+    <span>Option 1</span>
+    <small>This is the tiny label</small>
+</label>
+```
+
+#### Radio Groups ####
+
+A radio group is a list of radio buttons that are grouped together in a list. To create a radio group, use the following syntax:
+
+```
+<div class="radiogroup">
+	<label for="radio1">Radio Buttons</label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 1</span></label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 2</span></label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 3</span></label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 4</span></label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 5</span></label>
+</div>
+```
+
+Note that the input for a radio button must be inside the `<label>`. Also note that there is a space between the `<input>` and the `<span>`.
+
+To add a tiny label, place the `<small>` tag inside the `<label>`.
+
+```
+<div class="radiogroup">
+	<label for="radio1">Radio Buttons</label>
+	<label><input class="radio" type="radio" name="radio1" /> <span>Option 1</span><small>This is the tiny label</small></label>
+...
+```
+
+### Dropdowns/Combo Boxes ###
+
+To create a simple dropdown box, use the following syntax.
+
+```
+<label for="dropdown1">Dropdown</label>
+<select name="dropdown1">
+	<option>Value</option>
+	<option>Value</option>
+	<option>Value</option>
+	<option>Value</option>
+	<option>Value</option>
+</select>
+<small>This is a dropdown.</small>
+```
+
+If using the dropdown inside a `<p class="inliner">` element, the following syntax may be used to hide the label text until the user hovers over the control.
+
+```
+<label for="dropdown1">
+    <select name="dropdown1">
+        <option>Value</option>
+        <option>Value</option>
+        <option>Value</option>
+        <option>Value</option>
+        <option>Value</option>
+    </select>
+    <span class="hidden">This is a hover-only label</span>
+</label>
+```
+
+Note that with this syntax, tiny labels are not allowed.
+
+### Checkboxes ###
+
+To create a checkbox, use the following syntax,
+
+```
+<label>
+	<input type="checkbox" class="checkbox" value="c1" name="check1" />
+	<span>Check 1</span>
+	<small>This is a checkbox.</small>
+</label>
+```
+
+#### Check Group ####
+
+When creating a group of check boxes, they can be easily organized into a list using a check group.
+
+```
+<div class="checkgroup">
+    <label>
+        <input type="checkbox" class="checkbox" value="c1" name="check1" />
+        <span>Check 1</span>
+        <small>This is a checkbox.</small>
+    </label>
+    <label><input type="checkbox" class="checkbox" value="c3" name="check3" /> <span>Check 3</span></label>
+    <label><input type="checkbox" class="checkbox" value="c4" name="check4" /> <span>Check 4</span></label>
+    <label><input type="checkbox" class="checkbox" value="c5" name="check5" /> <span>Check 5</span></label>
+    <label><input type="checkbox" class="checkbox" value="c6" name="check6" /> <span>Check 6</span></label>
+</div>
+```
+
+Check groups can be nested safely. A `2em` indent will be applied to nested check groups.
+
+### File Upload ###
+
+A file upload control can be expressed with the following code.
+
+```
+<p class="upload">
+    <label for="file1">File Upload Label</label>
+    <input type="file" name="file1" />
+</p>
+```
+
+Additional information can be provided to the user in the form of a supplementary message or a tiny label.
+
+```
+<p class="upload">
+    <label for="file1">File Upload</label>
+    <input type="file" name="file1" />
+    <small>Tiny label</small>
+    <span>Supplementary message</span>
+</p>
+```
+
+### Buttons ###
+
+Buttons can be created as they normally would with standard HTML. Frame will automatically style them accordingly.
+
+```
+<input type="submit" value="Submit" />
+<input type="reset" value="Reset" />
+<input type="button" value="Button" />
+<button>This is a button</button>
+```
+
+### Form Layout ###
+
+To arrange form elements horizontally, you are free to use any of the standard layout libraries along with some of these form-only layout techniques.
+
+#### Fieldset ####
+
+To create a fieldset, use the following syntax. Any form elements can be placed in a fieldset just as they normally would be placed inside a `<form>` element.
+
+```
+<fieldset>
+    <legend>The fieldset legend</legend>
+    ...
+</fieldset>
+```
+
+#### Horizontal Inliner ####
+
+A horizontal inliner organizes a list of controls horizontally. If you wish to use the "hover-only" labels mentioned above, you must place the `<input>` in your `<label>` and wrap your label text in a `<span>`.
+
+```
+<p class="inliner">
+    <label for="horiz_search">Search</label>
+    <input type="text" name="horiz_search" />
+    <label>
+        <span class="hidden">Search Type</span>
+        <select name="horiz_search_type">
+            <option value="web">Web</option>
+            <option value="images">Images</option>
+            <option value="video">Video</option>
+        </select>
+    </label>
+</p>
+```
+
+#### Horizontal Buttons ####
+
+When arranging buttons horizontally, instead of using a horizontal inliner, use a horizontal button element.
+
+```
+<p class="buttons">
+    <input type="submit" value="Submit" class="submit" /><button>Action Button</button>
+</p>
+```
+
+Note that placing extra spaces between the buttons may disrupt the flow of the buttons.
+
+## Composite Form Elements ##
+
+There are some form elements which cannot be created with standard HTML alone. These controls require extra markup, though are just as simple to implement.
+
+### Currency Box ###
+
+A currency box places a currency symbol on the inside of the text box as a unit indicator. This can be created with the following syntax.
+
+```
+<p class="money">
+    <span>$</span>
+    <input type="text" name="currency" value="" />
+</p>
+```
+
+### Unit Box ###
+
+A unit box is similar to a currency box, except instead of placing a currency symbol on the inside of the text box, a word or phrase can be appended to the end of the text box. Also, text in the text box is aligned to the right. This can be created with the following syntax.
+
+```
+<p class="unit">
+    <input type="text" name="unit" value="" />
+    <span>meters</span>
+</p>
+```
+
+## Code ##
+
+When displaying code, it is often useful to highlight the syntax. Frame has built in support for syntax highlighting. To enable syntax highlighting, add the following configuration parameter to the body class:
+
+|use-code|Enables syntax highlighting|
+|:-------|:--------------------------|
+
+Code tags within a `<p>` tag will not be affected by this. Once enabled, syntax highlighting can be disabled on any individual `<code>` tag by placing the following class on it:
+
+|non-executing|Disables syntax highlighting on a `<code>` tag|
+|:------------|:---------------------------------------------|
+
+Syntax-highlighted `<code>` elements will use `white-space:pre` by default, so organize code accordingly.
+
+To use syntax highlighting, the following classes should be placed on `<span>` tags inside the `<code>` tag (such that the `<span>` tags properly delineate the context of the code). The alternate tag can also be used in place of a `<span>` with a class.
+
+|Class|Represents|Description|Alternate|
+|:----|:---------|:----------|:--------|
+|cs|Code Structure|Represents a structure of the code (i.e.: a reserved word; for, while, etc.)|`<tt>`|
+|f |Function|Represents the name of a function|`b`|
+|cm|Comment|Represents commented code|  |
+|v |Variable|Represents a variable|`<var>`|
+|l |Literal|Represents a literal value|`<kbd>`|
+|n |Numeric Literal|Represents a numeric value|`<samp>`|
+
+Here's a sample from the demo page:
+
+```
+<code><span class="cm">// This is a comment.</span>
+<span class="cs">function</span> <b>foo</b>(<span class="v">$bar</span>) {
+	<span class="cs">echo</span> <var>$bar</var>, <kbd>" is a pretty cool guy that "</kbd>;
+}
+</code>
+```
+
+Note: some browsers will add an extra line break if you don't start your code block immediately after the opening `<code>` tag. Plan accordingly.
+
+## Common Controls ##
+
+### Tabs ###
+
+Tabs are a commonly used interface element, and Frame makes it easy to display simple tabs in the most efficient way possible. Create a UL/LI structure as follows:
+
+```
+<ul class="tabs">
+    <li class="current"><a href="#">Tab 1</a></li>
+    <li><a href="#">Tab 2</a></li>
+    <li><a href="#">Tab 3</a></li>
+    <li><a href="#">Tab 4</a></li>
+</ul>
+```
+
+This will automagically create a set of tabs from the UL/LI structure. Marking an `<li>` element as "current" will make it the current tab (the tab highlighted and drawn to the forefront).
+
+### Inline Dialogs ###
+
+The following classes can be applied to any element to turn it into an inline dialog. You should not mix and match classes.
+
+|Class|Description|Appearance|
+|:----|:----------|:---------|
+|warning\_box|Warning|Red border along the top|
+|notice\_box|Notice|Gray border along the top|
+|success\_box|Success|Green border along the top|
+|login|Login|Yellow border along the left; extra margins|
+
+The structure of the element should be as follows:
+
+```
+<div class="...">
+    <strong>Title of the dialog</strong>
+    <p>Body text of the dialog can go right in here.</p>
+</div>
+```
+
+Inline dialogs can be any element, including forms.
+
+```
+<form action="#" method="post" class="...">
+    <strong>Warning!</strong>
+    <p>By clicking "Delete" you will permananently deleting the entry <tt>Blueprint CSS</tt>.</p>
+    <label>
+        <input type="checkbox" class="checkbox" value="sure" name="sure" />
+        <span>I am sure I wish to do this.</span>
+        <small>This action cannot be un-done.</small>
+    </label>
+    <p class="buttons">
+        <input type="submit" value="Delete" class="submit" name="submit" /><input type="submit" value="Cancel" class="submit" name="cancel" />
+    </p>
+</form>
+```
+
+## Table Styles ##
+
+Tables, by default, use a simple theme that only includes vertical separators. To activate horizontal separators, simply add `class="grid"` to the table.
+
+Horizontal separators for tables are not default or APA or print styles.

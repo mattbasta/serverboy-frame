@@ -1,0 +1,54 @@
+# Official Support #
+
+## Internet Explorer ##
+
+|Feature|6|7|8|
+|:------|:|:|:|
+|Reset|Yes|Yes|Yes|
+|Formatting|Yes|Yes|Yes|
+|Code|Yes|Yes|Yes|
+|Typography|Buggy|Yes|Yes|
+|Layout|Yes|Yes|Yes|
+|Controls|Yes|Yes|Yes|
+|Forms|Limited|Yes|Yes|
+|Tables|Yes|Yes|Yes|
+|Form Layout|Yes|Yes|Yes|
+|Paper Layout|No|Limited|Limited|
+|Print|Yes|Yes|Yes|
+
+
+  * IE6 has limited form support, but it renders correctly. Some visual features may not be implemented, but will degrade gracefully.
+
+The paper layout will not paginate in sheets in IE. IE6 does not support paper layouts at all.
+
+## Firefox ##
+
+|Feature|3|
+|:------|:|
+|Reset|Yes|
+|Formatting|Yes|
+|Code|Yes|
+|Typography|Yes|
+|Layout|Yes|
+|Controls|Yes|
+|Forms|Yes|
+|Tables|Yes|
+|Form Layout|Yes|
+|Paper Layout|Yes|
+|Print|Yes|
+
+## WebKit ##
+
+|Feature|Chrome|Safari|
+|:------|:-----|:-----|
+|Reset|Yes|Yes|
+|Formatting|Yes|Yes|
+|Code|Yes|Yes|
+|Typography|Yes|Yes|
+|Layout|Yes|Yes|
+|Controls|Yes|Yes|
+|Forms|Yes|Yes|
+|Tables|Yes|Yes|
+|Form Layout|Yes|Yes|
+|Paper Layout|Yes|Yes|
+|Print|Yes|Yes|
